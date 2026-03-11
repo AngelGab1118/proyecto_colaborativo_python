@@ -7,7 +7,10 @@ def imprimir_cuento():
         "Había una vez un estudiante que estaba aprendiendo Python.",
         "Un día decidió trabajar con GitHub para colaborar con su equipo.",
         "Después de mucho esfuerzo lograron terminar su proyecto.",
-        "Y aprendieron que trabajar en equipo hace el trabajo más fácil."
+        "Y aprendieron que trabajar en equipo hace el trabajo más fácil.",
+        # >>> NUEVAS LINEAS AÑADIDAS <<<
+        "El profesor reviso el respositorio y vio que cada miembro contribuyo.",
+        "Esto les enseño la importancia de trabajar juntos y documentar su codigo."
     ]
 
     for linea in cuento:
