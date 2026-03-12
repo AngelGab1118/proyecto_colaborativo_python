@@ -14,4 +14,4 @@ print("Potencia:", matematicas.potencia(a, b))
 print("Modulo:", matematicas.modulo(a, b))
 
 print("\nCuento:")
-cuento.imprimir_cuento()
+cuento.imprimir_cuento() 
