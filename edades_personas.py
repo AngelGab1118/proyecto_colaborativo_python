@@ -29,9 +29,18 @@ profesiones = {
     "Pedro": "abogado"
 }
 
+# Diccionario con ciudades de residencia
+ciudades = {
+    "Ana": "Ciudad de Panama",
+    "Luis": "Bogota",
+    "Carlos": "Ciudad de Mexico",
+    "Maria": "Buenos Aires",
+    "Pedro": "Madrid"
+}
+
 # Mostrar informacion extendida si el nombre existe
 if nombre in edades:
-    print(nombre, "tiene", edades[nombre], "años y trabaja como", profesiones[nombre] + ".")
+    print(nombre, "tiene", edades[nombre],  "años, vive en", ciudades[nombre], "y trabaja como", profesiones[nombre] + ".")
 else:
     print("La persona no fue encontrada.")
     
