@@ -1,11 +1,6 @@
 def imprimir_cuento():
-    print("Había una vez un estudiante que estaba aprendiendo Python.")
-    print("Un día decidió trabajar con GitHub para colaborar con su equipo.")
-    print("Después de mucho esfuerzo lograron terminar su proyecto.")
-    print("Y aprendieron que trabajar en equipo hace el trabajo más fácil.")
-    print("Fin del cuento.")
     """Imprime una historia sobre aprendizaje de Python y colaboración."""
-
+    
     print("\n--- Cuento sobre aprender Python y trabajar en equipo ---\n")
 
     cuento = [
@@ -14,7 +9,7 @@ def imprimir_cuento():
         "Después de mucho esfuerzo lograron terminar su proyecto.",
         "Y aprendieron que trabajar en equipo hace el trabajo más fácil.",
         # >>> NUEVAS LINEAS AÑADIDAS <<<
-        "El profesor reviso el respositorio y vio que cada miembro contribuyo.",
+        "El profesor reviso el repositorio y vio que cada miembro contribuyo.",
         "Esto les enseño la importancia de trabajar juntos y documentar su codigo."
     ]
 
