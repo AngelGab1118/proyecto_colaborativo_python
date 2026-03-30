@@ -1,7 +1,7 @@
 import random
 
 def jugar():
-    print("Bienvenido al juego de adivinanza")
+    print("🎮 Bienvenido al juego de adivinanza")
 
     # Elegir dificultad
     print("\nSelecciona dificultad:")
@@ -35,17 +35,17 @@ def jugar():
             continue
 
         if numero == numero_secreto:
-            print("¡Correcto! Adivinaste el número.")
+            print("🎉 ¡Correcto! Adivinaste el número.")
             return
         elif numero < numero_secreto:
-            print(" El número es mayor.")
+            print("📉 El número es mayor.")
         else:
-            print(" El número es menor.")
+            print("📈 El número es menor.")
 
         intentos -= 1
         print(f"Te quedan {intentos} intentos\n")
 
-    print(f"Perdiste. El número era {numero_secreto}")
+    print(f"❌ Perdiste. El número era {numero_secreto}")
 
 
 # Repetir juego
@@ -53,5 +53,5 @@ while True:
     jugar()
     repetir = input("\n¿Quieres jugar otra vez? (s/n): ").lower()
     if repetir != "s":
-        print( "Gracias por jugar")
+        print("👋 Gracias por jugar")
         break
