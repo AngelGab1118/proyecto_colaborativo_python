@@ -22,30 +22,46 @@ if pin in usuarios:
         print("3. Retirar dinero")
         print("4. Ver historial")
         print("5. Salir")
-
-        opcion = int(input("Selecciona una opción: "))
-
+        
+        try:
+            opcion = int(input("Selecciona una opción: "))
+        except:
+            print("❌ Debes ingresar un número válido")
+            continue
+            
         # 💰 Consultar saldo
         if opcion == 1:
             print(f"Tu saldo actual es: ${usuario['saldo']}")
 
         # ➕ Depositar
         elif opcion == 2:
-            deposito = float(input("Ingrese monto a depositar: "))
-            usuario["saldo"] += deposito
-            usuario["movimientos"].append(f"Depósito: +${deposito}")
-            print("Depósito realizado con éxito")
+            try:
+                deposito = float(input("Ingrese monto a depositar: "))
+                if deposito > 0:
+                   usuario["saldo"] += deposito
+                   usuario["movimientos"].append(f"Depósito: +${deposito}")
+                   print("✅ Depósito realizado con éxito")
+                   print(f"Saldo actual: ${usuario['saldo']}") 
+                else:
+                    print("❌ El monto debe ser positivo")
+            except:
+                print("❌ Entrada inválida")
 
         # ➖ Retirar
         elif opcion == 3:
-            retiro = float(input("Ingrese monto a retirar: "))
-            if retiro <= usuario["saldo"]:
-                usuario["saldo"] -= retiro
-                usuario["movimientos"].append(f"Retiro: -${retiro}")
-                print("Retiro realizado con éxito")
-            else:
-                print("❌ Fondos insuficientes")
-
+            try:
+                retiro = float(input("Ingrese monto a retirar: "))
+                if retiro <= 0:
+                     print("❌ El monto debe ser positivo")
+                elif retiro <= usuario["saldo"]:
+                    usuario["saldo"] -= retiro
+                    usuario["movimientos"].append(f"Retiro: -${retiro}")
+                    print("✅ Retiro realizado con éxito")
+                else:
+                     print("❌ Fondos insuficientes")
+            except:
+                print("❌ Entrada inválida")
+                
         # 📜 Historial
         elif opcion == 4:
             print("\n--- HISTORIAL ---")
