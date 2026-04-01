@@ -30,7 +30,11 @@ def jugar():
     while intentos > 0:
         try:
             numero = int(input("Ingresa tu número: "))
-        except:
+            # validacion de rango
+            if numero < 1 or numero > limite:
+                print(f"Ingresa un numero entre 1 y {limite}")
+                continue
+        except ValueError:
             print("Por favor ingresa un número válido.")
             continue
 
