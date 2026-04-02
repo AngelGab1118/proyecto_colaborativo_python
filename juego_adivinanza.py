@@ -1,4 +1,8 @@
 import random
+import os
+
+def limpiar_pantalla():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def jugar():
     print("🎮 Bienvenido al juego de adivinanza")
@@ -54,6 +58,7 @@ def jugar():
 
 # Repetir juego
 while True:
+    limpiar_pantalla()
     jugar()
     repetir = input("\n¿Quieres jugar otra vez? (s/n): ").lower()
     if repetir != "s":
