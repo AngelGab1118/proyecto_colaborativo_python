@@ -8,12 +8,24 @@ usuarios = {
     "1234": {"nombre": "Juan", "saldo": 1000, "movimientos": []},
     "5678": {"nombre": "Ana", "saldo": 1500, "movimientos": []}
 }
-
 limpiar()
 print("💰 Bienvenido a tu Cajero Automático")
 
-# 🔐 Login con PIN
-pin = input("Ingrese su PIN: ")
+# 🔐 Login con PIN con intentos
+intentos = 3
+
+while intentos > 0:
+    pin = input("Ingrese su PIN: ")
+    
+    if pin in usuarios:
+        break
+    else:
+        intentos -= 1
+        print(f"❌ PIN incorrecto. Intentos restantes: {intentos}")
+
+if intentos == 0:
+    print("🚫 Acceso bloqueado")
+    exit()
 
 if pin in usuarios:
     usuario = usuarios[pin]
